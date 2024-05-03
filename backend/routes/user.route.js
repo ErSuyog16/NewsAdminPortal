@@ -3,7 +3,7 @@ let mongoose = require("mongoose"),
   router = express.Router();
 
 // Student Model
-let newsAdmin = require("../models/user");
+let newsAdmin = require("./models/user");
 
 // CREATE Student
 router.route("/create-user").post((req, res, next) => {
