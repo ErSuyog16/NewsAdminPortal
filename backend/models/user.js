@@ -1,38 +1,33 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-let userSchema = new Schema({
-  name: {
-    type: String
+let newsAdmin = new Schema(
+  {
+    Title: {
+      type: String,
+    },
+    ImageUrl: {
+      type: String,
+    },
+    Description: {
+      type: String,
+    },
+    ReadMoreUrl: {
+      type: String,
+    },
+    ReadMoreText: {
+      type: String,
+    },
+    formDate:{
+      type:Date
+    },
+    formTime:{
+      type:Date
+    }
   },
-  address: {
-    type: String
-  },
-  email: {
-    type: String
-  },
-  phonenumber: {
-    type: Number
-  },
-  aadharno: {
-    type: Number
-  },
-  education: {
-    type: String
-  },
-  keyskills: {
-    type: String
-  },
-  experience: {
-    type: Number
-  },
-  password: {
-    type: String
+  {
+    collection: "News",
   }
+);
 
-
-}, {
-    collection: 'users'
-  })
-
-module.exports = mongoose.model('User', userSchema)
+module.exports = mongoose.model("News", newsAdmin);
