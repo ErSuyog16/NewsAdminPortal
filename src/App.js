@@ -6,42 +6,39 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.css";
 
-
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import CreateUser from "./components/create-user.component";
 
-
-
 function App() {
-  return (<Router>
-    <div className="App">
-      <header className="App-header">
-        <Navbar bg="dark" variant="dark">
-          <Container>
-
-            <Navbar.Brand>
-                Know Your Customer
+  return (
+    <Router>
+      <div className='App'>
+        <header className='App-header'>
+          <Navbar bg='dark' variant='dark'>
+            <Container className='d-flex justify-content-center'>
+              <Navbar.Brand style={{ fontWeight: "bold", fontSize: "30px" }}>
+                News Admin Portal{" "}
               </Navbar.Brand>
+            </Container>
+          </Navbar>
+        </header>
 
-          </Container>
-        </Navbar>
-      </header>
-
-      <Container>
-        <Row>
-          <Col md={12}>
-            <div className="wrapper">
-              <Switch>
-                <Route exact path='/' component={CreateUser} />
-
-              </Switch>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-  </Router>);
+        <Container>
+          <br />
+          <Row>
+            <Col md={12}>
+              <div className='wrapper'>
+                <Switch>
+                  <Route exact path='/' component={CreateUser} />
+                </Switch>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </Router>
+  );
 }
 
 export default App;

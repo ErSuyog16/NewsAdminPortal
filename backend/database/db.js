@@ -1,4 +1,3 @@
 module.exports = {
-  db: 'mongodb://localhost:27017/userinfoDB'
-
-}
+  db: "mongodb+srv://ersuyog16:suyog@node.urs3n.mongodb.net/?retryWrites=true&w=majority",
+};
